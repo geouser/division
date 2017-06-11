@@ -1,6 +1,6 @@
 /* Uncomment and set these variables to customize the grid. */
 
-$gutter: 15px
+$gutter: 10px
 
 .row 
 	box-sizing: border-box
@@ -182,11 +182,18 @@ $gutter: 15px
 	margin-left: 91.667%
 
 
+.reverse-xs
+	-ms-flex-direction: row-reverse
+	-webkit-box-orient: horizontal
+	-webkit-box-direction: reverse
+	flex-direction: row-reverse
+
 .start-xs 
 	-ms-flex-pack: start
 	-webkit-box-pack: start
 	justify-content: flex-start
 	text-align: start
+
 
 
 .center-xs 
@@ -266,8 +273,8 @@ $gutter: 15px
 		-ms-flex: 0 0 auto
 		-webkit-box-flex: 0
 		flex: 0 0 auto
-		padding-right: 15px
-		padding-left: 15px
+		padding-right: $gutter
+		padding-left: $gutter
 	
 
 	.col-sm 
@@ -402,6 +409,11 @@ $gutter: 15px
 		justify-content: flex-start
 		text-align: start
 	
+	.reverse-sm
+		-ms-flex-direction: row-reverse
+		-webkit-box-orient: horizontal
+		-webkit-box-direction: reverse
+		flex-direction: row-reverse
 
 	.center-sm 
 		-ms-flex-pack: center
@@ -617,6 +629,11 @@ $gutter: 15px
 		justify-content: flex-start
 		text-align: start
 	
+	.reverse-md
+		-ms-flex-direction: row-reverse
+		-webkit-box-orient: horizontal
+		-webkit-box-direction: reverse
+		flex-direction: row-reverse
 
 	.center-md 
 		-ms-flex-pack: center
@@ -852,8 +869,13 @@ $gutter: 15px
 		-webkit-box-align: start
 		align-items: flex-start
 	
+	.reverse-lg
+		-ms-flex-direction: row-reverse
+		-webkit-box-orient: horizontal
+		-webkit-box-direction: reverse
+		flex-direction: row-reverse
 
-	.middle-lg 
+	.center-lg 
 		-ms-flex-align: center
 		-webkit-box-align: center
 		align-items: center

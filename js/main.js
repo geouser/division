@@ -88,6 +88,32 @@ jQuery(document).ready(function($) {
 
 
     /*---------------------------
+                                  Countdown js
+    ---------------------------*/
+    $.countdown.setDefaults($.countdown.regionalOptions[localization]);
+    $('.countdown').each(function(index, el) {
+        $(this).countdown({
+            until: new Date( $(this).data('end').replace(/\s/, 'T') ),
+            format: 'DHMS',
+            padZeroes: true
+        });
+    });
+
+
+    /*---------------------------
+                                  Slick sliders
+    ---------------------------*/
+    $('.special-products-slider').slick({
+        fade: true,
+        dots: true,
+        arrows: false
+    })
+
+
+
+
+
+    /*---------------------------
                                   Fancybox
     ---------------------------*/
     $('.fancybox').fancybox({
