@@ -1,0 +1,121 @@
+.site-footer
+
+	&-top
+		background-color: #293236
+		padding: 40px 45px 50px
+		color: #7A7F82
+		
+		@media (max-width: 1630px)
+			padding: 30px 15px 30px
+	
+
+	&-bottom
+		background-color: #fff
+		padding: 33px 30px
+		
+		@media (max-width: 1630px)
+			padding: 25px 15px
+		
+		.copyright
+			text-align: left
+			font-weight: 300
+			color: #4d1c1c
+			
+		.payment-methods
+			margin: 0 -6px
+			+flex($j: flex-end);
+			
+			img
+				display: inline-block
+				margin: 0 6px
+				
+.footer-widget
+	&-text,
+	&-menu
+		text-align: left
+		
+
+.widget-logo
+	margin-bottom: 20px
+
+	a
+		display: block
+		width: 215px
+		max-width: 100%
+		
+		img
+			display: block
+			width: 100%
+			
+.widget-text
+	font-size: 15px
+	line-height: 22px
+	font-weight: 300
+	margin-bottom: 42px
+	max-width: 375px
+	
+.widget-socials
+	margin: 0 -7px
+	+flex()
+
+	a
+		margin: 0 7px
+		transition: all 0.3s ease
+		opacity: 0.1
+		
+		&:hover
+			opacity: 1
+		
+		img
+			display: block
+			
+	
+.footer-widget-menu
+	text-align: center
+
+.footer-menu
+	display: inline-block
+	text-align: left
+	
+	&-title
+		color: $red
+		font-size: 22px
+		margin-bottom: 13px
+	
+	ul
+		display: inline-block
+		text-align: left
+		
+	&-item
+		display: block
+		font-weight: 300
+		padding-left: 20px
+		position: relative 
+		
+		&:before
+			content: ''
+			width: 6px
+			height: 10px
+			background-image: url(../img/menu-arrow.svg)
+			background-repeat: no-repeat  
+			-webkit-background-size: 100% 
+			-o-background-size: 100% 
+			background-size: 100% 
+			position: absolute
+			top: 10px
+			left: 0
+			-webkit-transform: translateY(-50%) 
+			-moz-transform: translateY(-50%) 
+			-ms-transform: translateY(-50%) 
+			-o-transform: translateY(-50%) 
+			transform: translateY(-50%) 
+			opacity: 0.4
+		
+		&:not(:last-child)
+			margin-bottom: 10px
+		
+		a
+			color: inherit
+			
+			&:hover
+				text-decoration: underline
