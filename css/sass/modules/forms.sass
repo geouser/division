@@ -1,0 +1,29 @@
+.checkbox
+	input[type="checkbox"]
+		display: none
+		
+	label
+		color: #888888
+		font-size: 15px
+		font-weight: 300
+		cursor: pointer
+		
+		span
+			display: inline-block
+			padding-left: 10px
+			vertical-align: middle
+			
+		&:before
+			content: ''
+			width: 17px
+			height: 17px
+			display: inline-block
+			border: 1px solid #ddd
+			vertical-align: middle
+			
+	input[type="checkbox"]:checked + label:before
+		background-color: $green
+		border-color: $green
+		background-image: url(../img/check.svg)
+		background-repeat: no-repeat 
+		background-position: 50% 50%  

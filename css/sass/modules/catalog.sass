@@ -1,0 +1,39 @@
+.catalog
+	background-color: #fff
+	
+	&-header
+		padding: 85px 0
+		
+		.title
+			color: $text
+			font-size: 24px
+			font-weight: 600
+			text-transform: uppercase
+			text-decoration: underline 
+			margin-bottom: 39px
+			
+	&-footer
+		padding: 80px 0
+			
+	.tabs-controls
+		&__item
+			display: inline-block
+			margin: 0 8px
+			
+			&.ui-state-active
+				.button
+					background-color: $red
+					color: #fff 
+					
+
+
+.products-grid
+	+flex()
+
+	&-5
+		.product-preview
+			width: 20% 
+	
+	&-4
+		.product-preview
+			width: 25% 

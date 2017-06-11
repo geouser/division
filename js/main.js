@@ -86,6 +86,11 @@ jQuery(document).ready(function($) {
     });
 
 
+    /*---------------------------
+                                  JQuery UI Tabs
+    ---------------------------*/
+    $( ".tabs" ).tabs();
+
 
     /*---------------------------
                                   Countdown js
