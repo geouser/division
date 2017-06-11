@@ -87,6 +87,22 @@ jQuery(document).ready(function($) {
 
 
     /*---------------------------
+                                  Languages dropdown TOGGLE
+    ---------------------------*/
+    $('.js-toggle-languages').on('click', function(event) {
+        event.preventDefault();
+        $(this).parent().toggleClass('open');
+    });
+
+    $(document).mouseup(function(e) {
+        var container = $('.language-switcher')
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+            container.removeClass('open');
+        }
+    });
+
+
+    /*---------------------------
                                   JQuery UI Tabs
     ---------------------------*/
     $( ".tabs" ).tabs();
@@ -109,6 +125,13 @@ jQuery(document).ready(function($) {
                                   Slick sliders
     ---------------------------*/
     $('.special-products-slider').slick({
+        fade: true,
+        dots: true,
+        arrows: false
+    })
+
+
+    $('.offer-slider').slick({
         fade: true,
         dots: true,
         arrows: false
