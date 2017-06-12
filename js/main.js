@@ -168,7 +168,7 @@ jQuery(document).ready(function($) {
     /*---------------------------
                                   JQuery UI Tabs
     ---------------------------*/
-    $( ".tabs" ).tabs();
+    $( ".tabs, .tabs-light" ).tabs();
 
 
     /*---------------------------
@@ -201,7 +201,24 @@ jQuery(document).ready(function($) {
     })
 
 
+    $('.productSlider').slick({
+        arrows: false,
+        dots: false,
+        fade: true,
+        asNavFor: '.productSliderNav'
+    });
 
+    $('.productSliderNav').slick({
+        arrows: false,
+        dots: false,
+        vertical: true,
+        verticalSwiping: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        focusOnSelect: true,
+        centerMode: true,
+        asNavFor: '.productSlider'
+    });
 
 
     /*---------------------------

@@ -1,0 +1,136 @@
+.productMainInfo
+    margin-bottom: 20px
+    .wrapper
+        background-color: #FFF 
+    &__list
+        list-style-type: none
+        font-weight: 300
+        ul
+            margin: 40px 0
+            padding: 0  
+        li 
+            display: block
+            margin-bottom: 8px
+        .checkbox + .checkbox
+            margin-left: 10px 
+    &__side
+        box-shadow: -2px 0 2px rgba(0, 0, 0, 0.05)
+        p
+            font-size: 15px
+            font-style: italic
+            font-weight: 300
+            color: #aaaaaa
+            margin-bottom: 20px
+            &:last-child
+             margin-bottom: 0 
+        .sum-result 
+            font-size: 34px
+        div + .button
+            margin-top: 20px 
+        .row
+            flex-direction: column
+            height: 100% 
+            align-items: stretch
+            & > div 
+                flex: 2
+                &:first-of-type
+                    flex: 1
+                border-bottom: 1px solid #eee
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                padding: 0 35px 
+                &:last-child
+                    border: none
+                    
+
+.productSliderNav
+    border-right: 1px solid #eeeeee
+    min-height: 470px 
+    .slick-slide
+        text-align: center
+        width: 70px !important
+        float: none
+        margin: 10px auto  
+        height: 70px
+        border: 3px solid transparent
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+        &.slick-current
+            border-color: #ee474d
+        img 
+            display: inline-block
+            vertical-align: middle
+            max-width: 95%
+            max-height: 90%  
+        &:before
+            height: 100% 
+            content: ""
+            display: inline-block
+            vertical-align: middle 
+            
+
+.productSlider
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+    width: 490px
+    margin: 0 auto 
+    .slick-slide
+        background-color: #FFF 
+        height: 390px
+        text-align: center
+        img 
+            display: inline-block
+            vertical-align: middle
+            max-width: 95%
+            max-height: 90%  
+        &:before
+            height: 100% 
+            content: ""
+            display: inline-block
+            vertical-align: middle   
+            
+
+.tabs-light
+    background-color: #FFF
+    text-align: left
+    font-weight: 300 
+    &__nav
+        list-style-type: none
+        border-bottom: 1px solid #eee
+        li 
+            display: inline-block
+            vertical-align: top
+            height: 60px 
+            line-height: 60px
+            text-align: center
+            &.ui-tabs-active
+                background-color: #344146;
+                a
+                    color: #FFF 
+            a 
+                color: #444444
+                line-height: 60px
+                padding: 0 40px
+                display: inline-block  
+                font-weight: 400
+                strong
+                    color: $red  
+
+.article
+    background-color: #FFF 
+    padding: 45px 40px 
+    margin-left: auto
+    margin-right: auto  
+    p
+        margin-bottom: 20px
+        font-size: 15px
+        line-height: 22px  
+        &:last-child
+            margin-bottom: 0 
+    & > div 
+        &:last-child
+            text-align: right
+            img,
+            video,
+            iframe
+                max-width: 100% 
