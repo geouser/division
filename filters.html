@@ -157,7 +157,7 @@
                 <div class="catalog has-sidebar">
                     <div class="catalog-body">
 
-                        <div class="catalog-sidebar shadow">
+                        <div class="catalog-sidebar shadow margin-btm">
                             <form action="" class="filter-form">
 
                                 <div class="filter open">
@@ -221,17 +221,106 @@
 
                                     <div class="filter-content">
                                         <div class="range-inputs">
-                                            <input type="text" name="min-price" id="min-price">
-                                            <input type="text" name="max-price" id="max-price">
+                                            <input type="text" name="min-price" id="min-price" value="0">
+                                            <input type="text" name="max-price" id="max-price" value="10000">
                                         </div>
                                         <div class="range-slider" data-min-price="0" data-max-price="10000"></div>
                                     </div>
                                 </div> <!-- end filter -->
 
+                                <div class="filter open">
+                                    <button class="filter-label js-toggle-filter">
+                                        <span>Диагональ экрана</span>
+                                    </button>
+
+                                    <div class="filter-content">
+                                        <span class="checkbox">
+                                            <input type="checkbox" name="diagonal[]" value="" id="diagonal-1">
+                                            <label for="diagonal-1"><span>79" (200 см)</span></label>
+                                        </span>
+                                        <span class="checkbox">
+                                            <input type="checkbox" name="diagonal[]" value="" id="diagonal-2">
+                                            <label for="diagonal-2"><span>78" (198 см)</span></label>
+                                        </span>
+                                        <span class="checkbox">
+                                            <input type="checkbox" name="diagonal[]" value="" id="diagonal-3">
+                                            <label for="diagonal-3"><span>75" (191 см)</span></label>
+                                        </span>
+                                        <span class="checkbox">
+                                            <input type="checkbox" name="diagonal[]" value="" id="diagonal-4">
+                                            <label for="diagonal-4"><span>74" (184 см)</span></label>
+                                        </span>
+                                    </div>
+                                </div> <!-- end filter -->
+
+                                <div class="filter open">
+                                    <button class="filter-label js-toggle-filter">
+                                        <span>Разрешение экрана</span>
+                                    </button>
+
+                                    <div class="filter-content">
+                                        <span class="checkbox">
+                                            <input type="checkbox" name="resolution[]" value="" id="resolution-1">
+                                            <label for="resolution-1"><span>4K (UHD) (219)</span></label>
+                                        </span>
+                                        <span class="checkbox">
+                                            <input type="checkbox" name="resolution[]" value="" id="resolution-2">
+                                            <label for="resolution-2"><span>Full HD (167)</span></label>
+                                        </span>
+                                        <span class="checkbox">
+                                            <input type="checkbox" name="resolution[]" value="" id="resolution-3">
+                                            <label for="resolution-3"><span>HD Ready</span></label>
+                                        </span>
+                                    </div>
+                                </div> <!-- end filter -->
+
+                                <div class="filter open">
+                                    <button class="filter-label js-toggle-filter">
+                                        <span>Частота экрана</span>
+                                    </button>
+
+                                    <div class="filter-content">
+                                        <span class="checkbox">
+                                            <input type="checkbox" name="frequency[]" value="" id="frequency-1">
+                                            <label for="frequency-1"><span>600-900 Гц</span></label>
+                                        </span>
+                                        <span class="checkbox">
+                                            <input type="checkbox" name="frequency[]" value="" id="frequency-1">
+                                            <label for="frequency-1"><span>1000-2000 Гц</span></label>
+                                        </span>
+                                    </div>
+                                </div> <!-- end filter -->
+
+                                <div class="filter open">
+                                    <button class="filter-label js-toggle-filter">
+                                        <span>Цвет</span>
+                                    </button>
+
+                                    <div class="filter-content">
+                                        <span class="checkbox">
+                                            <input type="checkbox" name="color[]" value="" id="color-1">
+                                            <label for="color-1"><span>Белый</span></label>
+                                        </span>
+                                        <span class="checkbox">
+                                            <input type="checkbox" name="color[]" value="" id="color-1">
+                                            <label for="color-1"><span>Черный</span></label>
+                                        </span>
+                                        <span class="checkbox">
+                                            <input type="checkbox" name="color[]" value="" id="color-1">
+                                            <label for="color-1"><span>Серый</span></label>
+                                        </span>
+                                    </div>
+                                </div> <!-- end filter -->
+
+                                <div class="filter-reset">
+                                    <button class="button button--grey js-reset-filter-form">Очистить все</button>
+                                </div>
+
                             </form>
                         </div> <!-- end sidebar -->
 
-                        <main class="catalog-content">
+                        <main class="catalog-content margin-btm">
+
                             <div class="products-grid products-grid-4 shadow">
                                 <div class="product-preview">
                                     <div class="visible">
@@ -536,31 +625,6 @@
                                 <div class="product-preview">
                                     <div class="visible">
                                         <figure class="product-preview__image">
-                                            <a href="#"><img src="img/product-3.png" alt=""></a>
-                                        </figure>
-                                        <h3 class="product-preview__title"><a href="#">Lenovo monitor 24</a></h3>
-                                        <div class="product-preview__rating">
-                                            <span class="stars stars-3"></span>
-                                        </div>
-                                        <div class="product-preview__price">
-                                            <span>200$</span>
-                                        </div>    
-                                    </div>
-                                    <div class="hidden">
-                                        <div class="product-preview__add-to-cart">
-                                            <a href="#"><img src="img/add-to-cart.svg" alt=""></a>
-                                        </div>
-                                        <div class="product-preview__compare">
-                                            <span class="checkbox">
-                                                <input type="checkbox" name="compare" value="" id="compare-3">
-                                                <label for="compare-3"><span>Сравнить</span></label>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-preview">
-                                    <div class="visible">
-                                        <figure class="product-preview__image">
                                             <a href="#"><img src="img/product-4.png" alt=""></a>
                                         </figure>
                                         <h3 class="product-preview__title"><a href="#">PocketBook</a></h3>
@@ -608,7 +672,69 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>    
+                                <div class="product-preview">
+                                    <div class="visible">
+                                        <figure class="product-preview__image">
+                                            <a href="#"><img src="img/product-1.png" alt=""></a>
+                                        </figure>
+                                        <h3 class="product-preview__title"><a href="#">Server #88433</a></h3>
+                                        <div class="product-preview__rating">
+                                            <span class="stars stars-5"></span>
+                                        </div>
+                                        <div class="product-preview__price">
+                                            <span>3000$</span>
+                                        </div>    
+                                    </div>
+                                    <div class="hidden">
+                                        <div class="product-preview__add-to-cart">
+                                            <a href="#"><img src="img/add-to-cart.svg" alt=""></a>
+                                        </div>
+                                        <div class="product-preview__compare">
+                                            <span class="checkbox">
+                                                <input type="checkbox" name="compare" value="" id="compare-1">
+                                                <label for="compare-1"><span>Сравнить</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-preview">
+                                    <div class="visible">
+                                        <figure class="product-preview__image">
+                                            <a href="#"><img src="img/product-2.png" alt=""></a>
+                                        </figure>
+                                        <h3 class="product-preview__title"><a href="#">HP P1005</a></h3>
+                                        <div class="product-preview__rating">
+                                            <span class="stars stars-4"></span>
+                                        </div>
+                                        <div class="product-preview__price">
+                                            <span>1250$</span>
+                                        </div>    
+                                    </div>
+                                    <div class="hidden">
+                                        <div class="product-preview__add-to-cart">
+                                            <a href="#"><img src="img/add-to-cart.svg" alt=""></a>
+                                        </div>
+                                        <div class="product-preview__compare">
+                                            <span class="checkbox">
+                                                <input type="checkbox" name="compare" value="" id="compare-2">
+                                                <label for="compare-2"><span>Сравнить</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> <!-- end products grid -->
+
+                            <div class="pagination">
+                                <ul>
+                                    <li class="pagination-item prev"><a href="#"><img src="img/prev.svg" alt=""></a></li>
+                                    <li class="pagination-item active"><a href="#">1</a></li>
+                                    <li class="pagination-item"><a href="#">2</a></li>
+                                    <li class="pagination-item"><a href="#">3</a></li>
+                                    <li class="pagination-item"><a href="#">4</a></li>
+                                    <li class="pagination-item"><a href="#">5</a></li>
+                                    <li class="pagination-item next"><a href="#"><img src="img/next.svg" alt=""></a></li>
+                                </ul>
+                            </div>
                         </main> <!-- end main content -->                        
 
                     </div> <!-- end catalog-body -->

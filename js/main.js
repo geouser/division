@@ -103,13 +103,24 @@ jQuery(document).ready(function($) {
     /*---------------------------
                                   Filters
     ---------------------------*/
+    /* toggle filters */
     $('.js-toggle-filter').on('click', function(event) {
         event.preventDefault();
         $(this).siblings('.filter-content').slideToggle();
         $(this).parent().toggleClass('open');
+        $(this).toggleClass('hidden');
     });
 
 
+    /* reset form */
+    $('.js-reset-filter-form').on('click', function(event) {
+        event.preventDefault();
+        $('.filter-form')[0].reset();
+        var slider = $('.filter-form').find('.range-slider');
+        slider.slider( "option", "values", [ slider.data('min-price') * 1, slider.data('max-price') * 1 ] );
+    });
+
+    /* range sliders initialization*/
     $( ".range-slider" ).each(function(index, el) {
         var slider = $(this);
 
@@ -123,6 +134,7 @@ jQuery(document).ready(function($) {
             min: min,
             max: max,
             values: [ min, max ],
+            step: 100,
             slide: function( event, ui ) {
                 minInput.val( ui.values[ 0 ] );
                 maxInput.val( ui.values[ 1 ] );
