@@ -43,3 +43,25 @@ article
 	blockquote
 		&:not(:last-child)
 			margin-bottom: 20px
+			
+	img
+		display: block
+		margin: 0 auto 20px
+		max-width: 100% 
+		
+.article-row
+	+flex($ai: flex-start)
+
+	.content-column
+		width: calc(100% - 520px) 
+		padding-right: 80px 
+		
+		@media (max-width: 1630px)
+			width: calc(100% - 400px)
+			padding-right: 40px 
+
+	.image-column
+		width: 520px 
+		
+		@media (max-width: 1630px)
+			width: 400px 

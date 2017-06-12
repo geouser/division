@@ -120,6 +120,34 @@ jQuery(document).ready(function($) {
         slider.slider( "option", "values", [ slider.data('min-price') * 1, slider.data('max-price') * 1 ] );
     });
 
+    /* sort dropdown */
+    $('.js-toggle-sort-dropdown').on('click', function(event) {
+        event.preventDefault();
+        $(this).parent().toggleClass('open');
+    });
+
+    $(document).mouseup(function(e) {
+        var container = $('.sort-by')
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+            container.removeClass('open');
+        }
+    });
+
+
+    $('.js-sort').on('click', function(event) {
+        event.preventDefault();
+        $(this).parent().siblings().removeClass('active')
+        $(this).parent().addClass('active');
+
+        $('input[name="sort-by"]').val( $(this).data('sort') );
+        $('.sort-by').removeClass('open');
+
+        $('.js-toggle-sort-dropdown').find('span').text( $(this).text() );
+    });
+
+
+
+
     /* range sliders initialization*/
     $( ".range-slider" ).each(function(index, el) {
         var slider = $(this);
@@ -293,6 +321,8 @@ jQuery(document).ready(function($) {
     function googleMap_initialize() {
         var lat = $('#map_canvas').data('lat');
         var long = $('#map_canvas').data('lng');
+        var marker = $('#map_canvas').data('marker');
+        var zoom = $('#map_canvas').data('zoom');
 
         var mapCenterCoord = new google.maps.LatLng(lat, long);
         var mapMarkerCoord = new google.maps.LatLng(lat, long);
@@ -301,7 +331,7 @@ jQuery(document).ready(function($) {
 
         var mapOptions = {
             center: mapCenterCoord,
-            zoom: 16,
+            zoom: zoom,
             //draggable: false,
             disableDefaultUI: true,
             scrollwheel: false,
@@ -314,7 +344,7 @@ jQuery(document).ready(function($) {
         map.mapTypes.set('Styled',styledMapType);
         map.setMapTypeId('Styled');
 
-        var markerImage = new google.maps.MarkerImage('images/location.png');
+        var markerImage = new google.maps.MarkerImage(marker);
         var marker = new google.maps.Marker({
             icon: markerImage,
             position: mapMarkerCoord, 
