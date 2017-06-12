@@ -120,6 +120,34 @@ jQuery(document).ready(function($) {
         slider.slider( "option", "values", [ slider.data('min-price') * 1, slider.data('max-price') * 1 ] );
     });
 
+    /* sort dropdown */
+    $('.js-toggle-sort-dropdown').on('click', function(event) {
+        event.preventDefault();
+        $(this).parent().toggleClass('open');
+    });
+
+    $(document).mouseup(function(e) {
+        var container = $('.sort-by')
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+            container.removeClass('open');
+        }
+    });
+
+
+    $('.js-sort').on('click', function(event) {
+        event.preventDefault();
+        $(this).parent().siblings().removeClass('active')
+        $(this).parent().addClass('active');
+
+        $('input[name="sort-by"]').val( $(this).data('sort') );
+        $('.sort-by').removeClass('open');
+
+        $('.js-toggle-sort-dropdown').find('span').text( $(this).text() );
+    });
+
+
+
+
     /* range sliders initialization*/
     $( ".range-slider" ).each(function(index, el) {
         var slider = $(this);

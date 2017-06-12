@@ -146,6 +146,26 @@
             <div class="wrapper">
                 <div class="page-title">
                     <h1>Телевизоры</h1>
+
+                    <div class="sort-by">
+                        <form action="" class="sort-form">
+                            <input type="hidden" name="sort-by" value="popularity">
+                        </form>
+                        <button class="sort-button js-toggle-sort-dropdown shadow">
+                            <span>По популярности</span>
+                        </button>
+                        <ul class="sort-dropdown shadow">
+                            <li class="sort-dropdown-item active">
+                                <a href="#" data-sort="popularity" class="js-sort">По популярности</a>
+                            </li>
+                            <li class="sort-dropdown-item">
+                                <a href="#" data-sort="popularity" class="js-sort">По цене</a>
+                            </li>
+                            <li class="sort-dropdown-item">
+                                <a href="#" data-sort="popularity" class="js-sort">По отзывам</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -201,7 +221,7 @@
                                         </span>
                                         <span class="checkbox">
                                             <input type="checkbox" name="brand[]" value="" id="brand-2">
-                                            <label for="category-2"><span>LG</span></label>
+                                            <label for="brand-2"><span>LG</span></label>
                                         </span>
                                         <span class="checkbox">
                                             <input type="checkbox" name="brand[]" value="" id="brand-3">
@@ -285,8 +305,8 @@
                                             <label for="frequency-1"><span>600-900 Гц</span></label>
                                         </span>
                                         <span class="checkbox">
-                                            <input type="checkbox" name="frequency[]" value="" id="frequency-1">
-                                            <label for="frequency-1"><span>1000-2000 Гц</span></label>
+                                            <input type="checkbox" name="frequency[]" value="" id="frequency-2">
+                                            <label for="frequency-2"><span>1000-2000 Гц</span></label>
                                         </span>
                                     </div>
                                 </div> <!-- end filter -->
@@ -302,12 +322,12 @@
                                             <label for="color-1"><span>Белый</span></label>
                                         </span>
                                         <span class="checkbox">
-                                            <input type="checkbox" name="color[]" value="" id="color-1">
-                                            <label for="color-1"><span>Черный</span></label>
+                                            <input type="checkbox" name="color[]" value="" id="color-2">
+                                            <label for="color-2"><span>Черный</span></label>
                                         </span>
                                         <span class="checkbox">
-                                            <input type="checkbox" name="color[]" value="" id="color-1">
-                                            <label for="color-1"><span>Серый</span></label>
+                                            <input type="checkbox" name="color[]" value="" id="color-3">
+                                            <label for="color-3"><span>Серый</span></label>
                                         </span>
                                     </div>
                                 </div> <!-- end filter -->
@@ -725,7 +745,7 @@
                             </div> <!-- end products grid -->
 
                             <div class="pagination">
-                                <ul>
+                                <ul class="shadow">
                                     <li class="pagination-item prev"><a href="#"><img src="img/prev.svg" alt=""></a></li>
                                     <li class="pagination-item active"><a href="#">1</a></li>
                                     <li class="pagination-item"><a href="#">2</a></li>
