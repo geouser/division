@@ -304,6 +304,8 @@ jQuery(document).ready(function($) {
     function googleMap_initialize() {
         var lat = $('#map_canvas').data('lat');
         var long = $('#map_canvas').data('lng');
+        var marker = $('#map_canvas').data('marker');
+        var zoom = $('#map_canvas').data('zoom');
 
         var mapCenterCoord = new google.maps.LatLng(lat, long);
         var mapMarkerCoord = new google.maps.LatLng(lat, long);
@@ -312,7 +314,7 @@ jQuery(document).ready(function($) {
 
         var mapOptions = {
             center: mapCenterCoord,
-            zoom: 16,
+            zoom: zoom,
             //draggable: false,
             disableDefaultUI: true,
             scrollwheel: false,
@@ -325,7 +327,7 @@ jQuery(document).ready(function($) {
         map.mapTypes.set('Styled',styledMapType);
         map.setMapTypeId('Styled');
 
-        var markerImage = new google.maps.MarkerImage('images/location.png');
+        var markerImage = new google.maps.MarkerImage(marker);
         var marker = new google.maps.Marker({
             icon: markerImage,
             position: mapMarkerCoord, 
