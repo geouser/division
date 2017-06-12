@@ -1,0 +1,73 @@
+.filter
+	text-align: left
+	border-bottom: 1px solid #eee
+	
+	&.open
+		padding-bottom: 25px 
+		
+		@media (max-width: 1630px)
+			padding-bottom: 15px 
+	
+	&-label
+		color: #344146
+		text-transform: uppercase
+		padding: 25px
+		position: relative
+		width: 100% 
+		text-align: left
+		cursor: pointer
+		background-color: transparent
+		border: 0 
+		
+		@media (max-width: 1630px)
+			padding: 15px
+		
+		&:after
+			content: ""
+			width: 17px
+			height: 17px
+			position: absolute
+			top: 50%
+			right: 25px  
+			-webkit-transform: translateY(-50%) 
+			-moz-transform: translateY(-50%) 
+			-ms-transform: translateY(-50%) 
+			-o-transform: translateY(-50%) 
+			transform: translateY(-50%) 
+			background-image: url(../img/filter-arrow.svg)
+			background-repeat: no-repeat 
+			background-size: 100%  
+			
+			@media (max-width: 1630px)
+				right: 15px
+	
+	&-content
+		padding: 0 25px
+		
+		@media (max-width: 1630px)
+			padding: 0 15px
+		
+		.checkbox
+			display: block
+			
+			@media (max-width: 1630px)
+				.label
+					font-size: 14px
+			
+			&:not(:last-child)
+				margin-bottom: 8px
+				
+.range-inputs
+	+flex($j: space-between)
+
+	input
+		width: 100px
+		height: 50px  
+		color: #344146
+		text-align: center
+		font-weight: 600
+		border: 1px solid #dddddd
+		
+		@media (max-width: 1630px)
+			width: 90px 
+			height: 40px

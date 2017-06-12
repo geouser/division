@@ -86,6 +86,57 @@ jQuery(document).ready(function($) {
     });
 
 
+    $('.js-toggle-products-menu').on('click', function(event) {
+        event.preventDefault();
+        $(this).parent().toggleClass('open');
+    });
+
+    $(document).mouseup(function(e) {
+        var container = $('.catalog-menu')
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+            container.removeClass('open');
+        }
+    });
+
+
+
+    /*---------------------------
+                                  Filters
+    ---------------------------*/
+    $('.js-toggle-filter').on('click', function(event) {
+        event.preventDefault();
+        $(this).siblings('.filter-content').slideToggle();
+        $(this).parent().toggleClass('open');
+    });
+
+
+    $( ".range-slider" ).each(function(index, el) {
+        var slider = $(this);
+
+        var min = slider.data('min-price') * 1;
+        var max = slider.data('max-price') * 1;
+        var minInput = slider.siblings('.range-inputs').find('input[name="min-price"]');
+        var maxInput = slider.siblings('.range-inputs').find('input[name="max-price"]');
+
+        slider.slider({
+            range: true,
+            min: min,
+            max: max,
+            values: [ min, max ],
+            slide: function( event, ui ) {
+                minInput.val( ui.values[ 0 ] );
+                maxInput.val( ui.values[ 1 ] );
+            }
+        });
+
+        slider.siblings('.range-inputs').find('input').on('change', function(event) {
+            event.preventDefault();
+            slider.slider( "option", "values", [ minInput.val(), maxInput.val() ] );
+        });
+    });
+
+
+
     /*---------------------------
                                   Languages dropdown TOGGLE
     ---------------------------*/

@@ -1,0 +1,36 @@
+.breadcrumbs
+	display: block
+	padding: 30px 0
+	font-size: 14px  
+	font-weight: 300
+	color: #344146
+	text-align: left
+	
+	li
+		display: inline-block
+		
+		&:not(:last-child):after
+			content: ""
+			width: 5px
+			height: 10px
+			background-image: url(../img/breadcrumb-arrow.svg)
+			background-repeat: no-repeat 
+			background-position: 50% 50%
+			background-size: 100% 
+			display: inline-block
+			vertical-align: middle
+			margin: 0 16px
+			
+		& > span
+			display: inline-block
+			vertical-align: middle
+			color: #a1adb1
+			
+		a
+			color: inherit
+			display: inline-block
+			vertical-align: middle
+			
+			&:hover
+				text-decoration: underline
+		 

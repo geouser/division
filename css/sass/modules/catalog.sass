@@ -1,6 +1,4 @@
 .catalog
-	background-color: #fff
-	
 	&-header
 		padding: 85px 0
 		
@@ -25,10 +23,25 @@
 					background-color: $red
 					color: #fff 
 					
+	&.has-sidebar
+		.catalog-body
+			+flex($ai: flex-start)
+		
+		.catalog-sidebar
+			width: 20%
+		
+		.catalog-content
+			width: 80%
+					
+
+.catalog-sidebar
+	background-color: #FFF 
+
 
 
 .products-grid
 	+flex()
+	background-color: #FFF 
 
 	&-5
 		.product-preview

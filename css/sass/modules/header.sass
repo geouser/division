@@ -102,6 +102,37 @@
 .catalog-menu
 	width: 20%
 	height: 100%
+	position: relative
+	
+	.products-menu
+		position: absolute
+		z-index: 10 
+		top: 100%
+		left: 0
+		right: 0
+		width: 100%    
+		visibility: hidden
+		opacity: 0
+		-webkit-transform: translateY(10px) 
+		-moz-transform: translateY(10px) 
+		-ms-transform: translateY(10px) 
+		-o-transform: translateY(10px) 
+		transform: translateY(10px) 
+		-webkit-transition: all 0.3s ease 
+		-moz-transition: all 0.3s ease 
+		-ms-transition: all 0.3s ease 
+		-o-transition: all 0.3s ease 
+		transition: all 0.3s ease 
+	
+	&.open .products-menu
+		visibility: visible
+		opacity: 1
+		-webkit-transform: translateY(0) 
+		-moz-transform: translateY(0) 
+		-ms-transform: translateY(0) 
+		-o-transform: translateY(0) 
+		transform: translateY(0) 
+		
 
 .catalog-button
 	background-color: $red
@@ -112,6 +143,30 @@
 	text-align: left
 	padding: 0 25px
 	+flex($ai: center)
+	position: relative
+	
+	
+	&.js-toggle-products-menu
+		cursor: pointer
+	
+	&:after
+		content: ""
+		width: 8px
+		height: 8px
+		border-right: 1px solid #fff
+		border-bottom: 1px solid #fff
+		-webkit-transform: rotate(45deg)
+		-moz-transform: rotate(45deg)
+		-ms-transform: rotate(45deg)
+		-o-transform: rotate(45deg)
+		transform: rotate(45deg)
+		margin-top: -6px 
+		position: absolute
+		top: 50%
+		right: 25px 
+		
+		@media (max-width: 1630px)
+			right: 15px
 	
 	@media (max-width: 1630px)
 		padding: 0 15px
