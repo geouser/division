@@ -5,6 +5,10 @@
     &__prod
         border-bottom: 1px solid #eee
         margin: 0 auto 
+        @media (max-width: 991px)
+            display: block
+            padding: 20px 0
+            margin: 0 auto   
         & > div
             height: 140px 
             flex-basis: 22.66665%
@@ -17,9 +21,18 @@
                 border: none 
             strong
                 font-weight: 600 
+            @media (max-width: 991px)
+                display: block
+                height: auto
+                padding: 10px 20px
+                text-align: right 
+                border: none 
         &__name
             flex-basis: 32% !important
             justify-content: flex-start !important 
+            @media (max-width: 991px)
+                float: left
+                width: 50% 
             &__img 
                 width: 120px 
                 display: block 
@@ -27,6 +40,9 @@
                 img
                     max-width: 90px
                     max-height: 80px
+                @media (max-width: 991px)
+                    width: 100%
+                    text-align: center 
         &__num
             &__input
                 background-color: #fafafa
@@ -35,10 +51,20 @@
                 border: none
                 width: 120px
                 color: #6E6E6E
+                display: inline-block
+                vertical-align: middle
                 
         &__price
             padding-left: 70px
-            justify-content: space-between !important    
+            justify-content: space-between !important
+            strong,
+            a 
+                display: inline-block
+                vertical-align: middle
+            a
+                @media (max-width: 991px)
+                    margin-left: 10px
+                    margin-top: 2px      
             
     &__controls
         height: 165px

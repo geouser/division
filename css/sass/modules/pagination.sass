@@ -1,0 +1,58 @@
+.pagination
+	padding: 40px 0
+	text-align: center
+	
+	ul
+		+flex($ai: center, $j: center)
+		margin: 0 auto
+		
+		.pagination-item
+			background-color: #FFF 
+			height: 50px
+			line-height: 50px
+			text-align: center  
+			list-style: none 
+			width: 40px
+			color: #666666
+			-webkit-transition: all 0.3s ease 
+			-moz-transition: all 0.3s ease 
+			-ms-transition: all 0.3s ease 
+			-o-transition: all 0.3s ease 
+			transition: all 0.3s ease 
+			
+			&.active,
+			&:hover
+				background-color: $red
+				color: #fff 
+			
+			&.prev,
+			&.next
+				width: 50px
+				
+				&:hover
+					background-color: #eee 
+			
+			a
+				display: inline-block
+				width: 100% 
+				color: inherit
+			
+			&.prev
+				-webkit-border-top-left-radius: 25px 
+				border-top-left-radius: 25px 
+				-webkit-border-bottom-left-radius: 25px 
+				border-bottom-left-radius: 25px 
+				border-right: 1px solid #eee 
+
+				img
+					width: 8px
+			
+			&.next
+				-webkit-border-top-right-radius: 25px 
+				border-top-right-radius: 25px 
+				-webkit-border-bottom-right-radius: 25px 
+				border-bottom-right-radius: 25px 
+				border-left: 1px solid #eee 
+
+				img
+					width: 8px

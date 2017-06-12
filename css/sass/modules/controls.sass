@@ -124,6 +124,8 @@
 
 .minus-num,
 .plus-num
+    display: inline-block
+    vertical-align: middle
     position: relative
     margin-right: -25px
     border: 5px solid #FFF 
@@ -164,7 +166,8 @@
             transition: all .2s   
          
 .plus-num
-    margin-left: -25px 
+    margin-left: -25px
+    margin-right: 0  
     &:after 
         content: "+" 
         
@@ -176,5 +179,6 @@
     border: none
     cursor: pointer
     transition: all .2s
+    display: inline-block
     &:hover
         background-color: $red 
