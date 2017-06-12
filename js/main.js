@@ -302,4 +302,30 @@ jQuery(document).ready(function($) {
         googleMap_initialize();
     }
 
+
+     // This button will increment the value
+    $('.plus-num__input').click(function(e){
+        e.preventDefault();
+        fieldName = $(this).attr('field');
+        var currentVal = parseInt($('input[name="'+fieldName+'"]').val());
+        if (!isNaN(currentVal)) {
+            $('input[name="' + fieldName + '"]').val(currentVal + 1);
+        } else {
+            $('input[name="'+fieldName+'"]').val(0);
+        }
+    });
+
+    // This button will decrement the value till 0
+    $(".minus-num__input").click(function(e) {
+        console.log('dcs')
+        e.preventDefault();
+        fieldName = $(this).attr('field');
+        var currentVal = parseInt($('input[name="'+fieldName+'"]').val());
+        if (!isNaN(currentVal) && currentVal > 0) {
+            $('input[name="'+fieldName+'"]').val(currentVal - 1);
+        } else {
+            $('input[name="'+fieldName+'"]').val(0);
+        }
+    });
+
 }); // end file
