@@ -1,0 +1,152 @@
+.compare-block
+	background-color: #fff 
+	overflow: auto
+	
+
+	table
+		width: auto
+		width: 100% 
+		border: 0
+		border-collapse: collapse
+		
+		thead
+			td
+				vertical-align: middle
+				border: 1px solid #fff
+		
+		td
+			padding: 25px
+			vertical-align: top
+			box-sizing: border-box
+			
+			@media (max-width: 1630px)
+				padding: 15px
+				
+		tbody
+			text-align: left
+			font-size: 15px
+			font-weight: 300
+			
+			tr
+				-webkit-transition: background-color 0.3s ease 
+				-moz-transition: background-color 0.3s ease 
+				-ms-transition: background-color 0.3s ease 
+				-o-transition: background-color 0.3s ease 
+				transition: background-color 0.3s ease 
+			
+			tr:hover
+				background-color: #f9f9f9;
+			
+			td
+				border-bottom: 1px solid #eee
+				border-right: 1px solid #eee
+				
+				&:last-child
+					border-right: 0
+					
+			.table-section
+				color: $red
+				font-weight: 400;
+				text-transform: uppercase;
+				
+				&:hover
+					background-color: transparent 
+				
+				td
+					padding-top: 30px 
+					border-bottom: 0
+				
+
+
+
+		
+.parameter-controls
+	.button
+		display: block
+		margin: 20px auto
+
+.parameter-controls,
+.product-card
+	width: 149px  // 400px - 2 * padding 25px
+	display: inline-block
+	
+	@media (max-width: 1630px)
+		width: 261px
+		
+
+.product-card
+	padding: 25px
+	position: relative
+	text-align: left
+	
+	@media (max-width: 1630px)
+		padding: 15px
+	
+	&__image
+		margin: 0 0 15px 0
+		height: 45px
+		
+		img
+			max-height: 100%
+			max-width: 100%
+			display: block 
+			
+	&__title
+		margin-bottom: 12px
+		
+		a
+			color: inherit
+			
+			&:hover
+				text-decoration: underline
+		
+		h3
+			color: #344146;
+			font-weight: 300;
+			line-height: 22px;
+			height: 66px
+			overflow: hidden
+			
+			@media (max-width: 1630px)
+				height: 60px
+				line-height: 20px
+				font-size: 15px 
+			
+	&__price
+		color: $red
+		font-weight: 600
+		
+	.delete
+		position: absolute
+		top: 25px
+		right: 25px
+		opacity: 0.2
+		filter: grayscale(100)
+		-webkit-transition: all 0.3s ease 
+		-moz-transition: all 0.3s ease 
+		-ms-transition: all 0.3s ease 
+		-o-transition: all 0.3s ease 
+		transition: all 0.3s ease 
+		
+		&:hover
+			opacity: 1
+			filter: grayscale(0)
+		
+		@media (max-width: 1630px)
+			top: 15px
+			right: 15px
+			
+		img
+			display: block
+			
+	.cart
+		position: absolute
+		bottom: 25px 
+		right: 25px
+		
+		img
+			display: block
+		
+		@media (max-width: 1630px)
+			bottom: 15px
+			right: 15px
