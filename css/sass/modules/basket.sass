@@ -17,6 +17,10 @@
             display: flex
             align-items: center
             justify-content: center  
+            @media (max-width: 1630px)
+                padding: 0 30px 
+            @media (max-width: 1200px)
+                padding: 0 14px 
             &:last-of-type
                 border: none 
             strong
@@ -26,13 +30,16 @@
                 height: auto
                 padding: 10px 20px
                 text-align: right 
-                border: none 
+                border: none
+            @media (max-width: 400px)
+                padding: 10px 10px  
         &__name
             flex-basis: 32% !important
             justify-content: flex-start !important 
             @media (max-width: 991px)
                 float: left
                 width: 50% 
+                text-align: center !important 
             &__img 
                 width: 120px 
                 display: block 
@@ -57,13 +64,23 @@
                     margin-top: 2px      
             
     &__controls
-        height: 165px
-        padding: 0 40px
+        padding: 50px 40px
+        @media (max-width: 1200px)
+            padding: 30px 14px
+        @media (max-width: 991px)
+            padding: 20px 
         .sum-result
             display: inline-block
             vertical-align: middle
+            @media (max-width: 599px)
+                margin-top: 20px 
             & + .button
-                margin-left: 40px   
+                margin-left: 40px
+                @media (max-width: 1200px)
+                    display: block
+                    margin: 20px 0 0 auto
+                @media (max-width: 599px)
+                    margin: 20px auto 0     
                     
 
 .sum-result
@@ -74,3 +91,5 @@
     line-height: 1 
     strong
         color: #ee474d
+    @media (max-width: 991px)
+        font-size: 20px 
