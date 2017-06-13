@@ -1,20 +1,48 @@
 .productMainInfo
     margin-bottom: 20px
+    @media (max-width: 991px)
+        .row .row
+            margin-left: 0
+            margin-right: 0
+            .row
+                margin-left: -10px
+                margin-right: -10px    
     .wrapper
-        background-color: #FFF 
+        & > .row
+            background-color: #FFF
+            margin-left: 0
+            margin-right: 0   
     &__list
         list-style-type: none
         font-weight: 300
+        @media (max-width: 991px)
+            border-top: 1px solid #eeeeee
+            margin-top: 20px
+            padding-top: 20px
+            text-align: center  
         ul
             margin: 40px 0
-            padding: 0  
+            padding: 0 
+            @media (max-width: 1200px)
+                margin: 30px 0 
+            @media (max-width: 991px)
+                margin: 15px 0  
         li 
             display: block
             margin-bottom: 8px
+            @media (max-width: 1200px)
+                font-size: 14px
+                margin-bottom: 4px 
+            @media (max-width: 599px)
+                font-size: 13px  
         .checkbox + .checkbox
             margin-left: 10px 
+            
     &__side
         box-shadow: -2px 0 2px rgba(0, 0, 0, 0.05)
+        @media (max-width: 991px)
+            padding: 20px 0 
+            box-shadow: none 
         p
             font-size: 15px
             font-style: italic
@@ -22,7 +50,12 @@
             color: #aaaaaa
             margin-bottom: 20px
             &:last-child
-             margin-bottom: 0 
+                margin-bottom: 0
+            @media (max-width: 1200px)
+                font-size: 14px
+                margin-bottom: 10px 
+            @media (max-width: 599px)
+                font-size: 13px   
         .sum-result 
             font-size: 34px
         div + .button
@@ -31,6 +64,8 @@
             flex-direction: column
             height: 100% 
             align-items: stretch
+            @media (max-width: 991px)
+                height: auto
             & > div 
                 flex: 2
                 &:first-of-type
@@ -43,25 +78,37 @@
                 padding: 0 35px 
                 &:last-child
                     border: none
+                @media (max-width: 991px)
+                    border: none
+                    padding: 10px 
                     
 
 .productSliderNav
     border-right: 1px solid #eeeeee
-    min-height: 470px 
+    min-height: 470px
+    padding: 0 
+    @media (max-width: 991px)
+        border: none
+        min-height: 0 
+        padding-right: 10px  
     .slick-slide
         text-align: center
         width: 70px !important
+        max-width: 92% 
         float: none
         margin: 10px auto  
         height: 70px
         border: 3px solid transparent
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+        @media (max-width: 500px)
+            height: 40px
+            border-width: 1px 
         &.slick-current
             border-color: #ee474d
         img 
             display: inline-block
             vertical-align: middle
-            max-width: 95%
+            max-width: 90%
             max-height: 90%  
         &:before
             height: 100% 
@@ -73,15 +120,28 @@
 .productSlider
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
     width: 490px
+    max-width: 100% 
     margin: 0 auto 
+    @media (max-width: 599px)
+        width: 100% 
+    @media (max-width: 500px)
+        margin: 20px auto 
     .slick-slide
         background-color: #FFF 
         height: 390px
         text-align: center
+        @media (max-width: 1200px)
+            height: 300px 
+        @media (max-width: 500px)
+            height: 240px 
+        @media (max-width: 400px)
+            height: 200px 
+        @media (max-width: 350px)
+            height: 180px 
         img 
             display: inline-block
             vertical-align: middle
-            max-width: 95%
+            max-width: 90%
             max-height: 90%  
         &:before
             height: 100% 

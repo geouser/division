@@ -245,7 +245,21 @@ jQuery(document).ready(function($) {
         slidesToScroll: 1,
         focusOnSelect: true,
         centerMode: true,
-        asNavFor: '.productSlider'
+        asNavFor: '.productSlider',
+        responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 2
+          }
+        }
+      ]
     });
 
 
