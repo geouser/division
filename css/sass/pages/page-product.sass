@@ -188,13 +188,15 @@
             display: inline-block
             vertical-align: top
             height: 60px 
-            line-height: 60px
             text-align: center
             -webkit-transition: all 0.3s ease
             -moz-transition: all 0.3s ease
             -ms-transition: all 0.3s ease
             -o-transition: all 0.3s ease
             transition: all 0.3s ease
+            
+            @media (max-width: 991px)
+                height: 50px
             
             &:hover
                 background-color: #eee
@@ -210,6 +212,10 @@
                 padding: 0 40px
                 display: inline-block  
                 font-weight: 400
+                
+                @media (max-width: 991px)
+                    line-height: 50px
+                    padding: 0 20px
                 
                 strong
                     color: $red  
