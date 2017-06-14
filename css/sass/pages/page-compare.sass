@@ -34,6 +34,10 @@
 				-o-transition: background-color 0.3s ease 
 				transition: background-color 0.3s ease 
 			
+				@media (max-width: 1199px)
+					&:not(.table-section):nth-child(even)
+						background-color: #f9f9f9
+			
 			tr:hover
 				background-color: #f9f9f9;
 			
@@ -48,6 +52,7 @@
 				color: $red
 				font-weight: 400;
 				text-transform: uppercase;
+				background-color: transparent!important 
 				
 				&:hover
 					background-color: transparent 
@@ -67,11 +72,19 @@
 
 .parameter-controls,
 .product-card
-	width: 149px  // 400px - 2 * padding 25px
+	width: 349px  // 400px - 2 * padding 25px
 	display: inline-block
 	
 	@media (max-width: 1630px)
 		width: 261px
+	
+	@media (max-width: 1199px)
+		width: 211px
+	
+	@media (max-width: 991px)
+		width: 170px
+	
+
 		
 
 .product-card
@@ -81,10 +94,17 @@
 	
 	@media (max-width: 1630px)
 		padding: 15px
+		
+	@media (max-width: 1199px)
+		padding: 10px
 	
 	&__image
 		margin: 0 0 15px 0
 		height: 45px
+		padding-right: 30px
+		
+		@media (max-width: 1199px)
+			height: 40px
 		
 		img
 			max-height: 100%
@@ -93,6 +113,9 @@
 			
 	&__title
 		margin-bottom: 12px
+		
+		@media (max-width: 991px)
+			margin-bottom: 5px
 		
 		a
 			color: inherit
@@ -111,6 +134,15 @@
 				height: 60px
 				line-height: 20px
 				font-size: 15px 
+			
+			@media (max-width: 1199px)
+				font-size: 13px
+				line-height: normal 
+				height: 51px
+			
+			@media (max-width: 991px)
+				font-size: 11px
+				height: 56px
 			
 	&__price
 		color: $red
@@ -136,6 +168,10 @@
 			top: 15px
 			right: 15px
 			
+		@media (max-width: 1199px)
+			top: 10px
+			right: 10px
+			
 		img
 			display: block
 			
@@ -150,3 +186,7 @@
 		@media (max-width: 1630px)
 			bottom: 15px
 			right: 15px
+		
+		@media (max-width: 1199px)
+			bottom: 10px
+			right: 10px
