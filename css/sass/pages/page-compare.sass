@@ -3,63 +3,63 @@
 	overflow: auto
 	
 
-	table
-		width: auto
-		width: 100% 
-		border: 0
-		border-collapse: collapse
+table
+	width: auto
+	border: 0
+	border-collapse: collapse
+	border: 1px solid #eee
+	
+	thead
+		td
+			vertical-align: middle
+			border: 1px solid #fff
+	
+	td
+		padding: 25px
+		vertical-align: top
+		box-sizing: border-box
 		
-		thead
-			td
-				vertical-align: middle
-				border: 1px solid #fff
+		@media (max-width: 1630px)
+			padding: 15px
+			
+	tbody
+		text-align: left
+		font-size: 15px
+		font-weight: 300
+		
+		tr
+			-webkit-transition: background-color 0.3s ease 
+			-moz-transition: background-color 0.3s ease 
+			-ms-transition: background-color 0.3s ease 
+			-o-transition: background-color 0.3s ease 
+			transition: background-color 0.3s ease 
+		
+			@media (max-width: 1199px)
+				&:not(.table-section):nth-child(even)
+					background-color: #f9f9f9
+		
+		tr:hover
+			background-color: #f9f9f9;
 		
 		td
-			padding: 25px
-			vertical-align: top
-			box-sizing: border-box
+			border-bottom: 1px solid #eee
+			border-right: 1px solid #eee
 			
-			@media (max-width: 1630px)
-				padding: 15px
+			&:last-child
+				border-right: 0
 				
-		tbody
-			text-align: left
-			font-size: 15px
-			font-weight: 300
+		.table-section
+			color: $red
+			font-weight: 400;
+			text-transform: uppercase;
+			background-color: transparent!important 
 			
-			tr
-				-webkit-transition: background-color 0.3s ease 
-				-moz-transition: background-color 0.3s ease 
-				-ms-transition: background-color 0.3s ease 
-				-o-transition: background-color 0.3s ease 
-				transition: background-color 0.3s ease 
-			
-				@media (max-width: 1199px)
-					&:not(.table-section):nth-child(even)
-						background-color: #f9f9f9
-			
-			tr:hover
-				background-color: #f9f9f9;
+			&:hover
+				background-color: transparent 
 			
 			td
-				border-bottom: 1px solid #eee
-				border-right: 1px solid #eee
-				
-				&:last-child
-					border-right: 0
-					
-			.table-section
-				color: $red
-				font-weight: 400;
-				text-transform: uppercase;
-				background-color: transparent!important 
-				
-				&:hover
-					background-color: transparent 
-				
-				td
-					padding-top: 30px 
-					border-bottom: 0
+				padding-top: 30px 
+				border-bottom: 0
 				
 
 
@@ -72,7 +72,7 @@
 
 .parameter-controls,
 .product-card
-	width: 349px  // 400px - 2 * padding 25px
+	width: 348px  // 400px - 2 * padding 25px
 	display: inline-block
 	
 	@media (max-width: 1630px)

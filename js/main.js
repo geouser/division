@@ -103,6 +103,15 @@ jQuery(document).ready(function($) {
     /*---------------------------
                                   Filters
     ---------------------------*/
+    /* toggle filters form */
+    $('.js-toggle-sidebar-filters').on('click', function(event) {
+        event.preventDefault();
+        $(this).toggleClass('open');
+        $(this).siblings('.filter-form').slideToggle();
+    });
+
+
+
     /* toggle filters */
     $('.js-toggle-filter').on('click', function(event) {
         event.preventDefault();
@@ -196,7 +205,11 @@ jQuery(document).ready(function($) {
     /*---------------------------
                                   JQuery UI Tabs
     ---------------------------*/
-    $( ".tabs, .tabs-light" ).tabs();
+    $( ".tabs, .tabs-light" ).tabs({
+        activate: function( event, ui ) {
+            ui.newPanel.find('.slick-slider').slick('setPosition');
+        }
+    });
 
 
     /*---------------------------
@@ -246,22 +259,15 @@ jQuery(document).ready(function($) {
         dots: false,
         vertical: true,
         verticalSwiping: true,
-        slidesToShow: 4,
+        slidesToShow: 5,
         slidesToScroll: 1,
         focusOnSelect: true,
-        centerMode: true,
         asNavFor: '.productSlider',
         responsive: [
         {
-          breakpoint: 991,
+          breakpoint: 1200,
           settings: {
-            slidesToShow: 3
-          }
-        },
-        {
-          breakpoint: 500,
-          settings: {
-            slidesToShow: 2
+            slidesToShow: 4
           }
         }
       ]

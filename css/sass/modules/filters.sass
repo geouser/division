@@ -2,6 +2,7 @@
 	text-align: left
 	border-bottom: 1px solid #eee
 	
+
 	&.open
 		padding-bottom: 25px 
 		
@@ -63,9 +64,12 @@
 		.checkbox
 			display: block
 			
-			@media (max-width: 1630px)
-				.label
+			label
+				@media (max-width: 1630px)
 					font-size: 14px
+			
+				@media (max-width: 1199px) and (min-width: 992px)
+					font-size: 13px
 			
 			&:not(:last-child)
 				margin-bottom: 8px
@@ -80,10 +84,20 @@
 		text-align: center
 		font-weight: 600
 		border: 1px solid #dddddd
+		-webkit-appearance: none 
+		-moz-appearance: none 
+		appearance: none 
 		
 		@media (max-width: 1630px)
 			width: 90px 
 			height: 40px
+		
+		@media (max-width: 1199px)
+			width: 70px
+			height: 35px
+		
+		@media (max-width: 991px)
+			width: calc(50% - 10px)
 			
 .range-slider
 	margin-top: 45px 
@@ -118,7 +132,8 @@
 
 .filter-reset
 	padding: 40px 15px
-	
+	width: 100%
+
 
 
 .sort-by
@@ -126,6 +141,13 @@
 	top: -6px
 	right: 0 
 	z-index: 12 
+	
+	@media (max-width: 991px)
+		width: 100%
+		position: relative
+		top: auto 
+		right: auto 
+		margin-top: 30px
 	
 	.sort-button
 		width: 240px
@@ -137,6 +159,9 @@
 		background-color: #fff 
 		cursor: pointer
 		color: #666666
+		
+		@media (max-width: 991px)
+			width: 100%
 		
 		&:after
 			content: ""
@@ -218,3 +243,41 @@
 		-ms-transform: translateY(4px) 
 		-o-transform: translateY(4px) 
 		transform: translateY(4px) 
+		
+
+.show-filters
+	width: 100%
+	height: 40px
+	line-height: 38px
+	color: #fff
+	background-color: $red 
+	border: 0
+	position: relative
+	
+	@media (min-width: 992px)
+		display: none
+		
+		& + .filter-form
+			display: block!important
+			
+	@media (max-width: 991px)
+		& + .filter-form
+			display: none
+	
+	&:after
+		content: ''
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 6px 4px 0 4px;
+		border-color: #fff transparent transparent transparent;
+		display: block 
+		margin-left: 10px
+		position: absolute
+		top: 50%
+		right: 15px
+		margin-top: -3px 
+	
+	&.open:after
+		border-width: 0 4px 6px 4px;
+		border-color: transparent transparent #fff transparent;
