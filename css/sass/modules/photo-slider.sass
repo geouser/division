@@ -1,0 +1,57 @@
+.photo-slider
+	position: relative
+	margin-bottom: 0!important
+	margin-left: auto
+	margin-right: auto
+	
+	img
+		display: block 
+		margin-bottom: 0
+		width: 100%  
+		
+	.slick-dots
+		position: absolute
+		bottom: 0
+		right: 0
+		text-align: right
+		padding: 0 22px 18px 22px
+		
+		li
+			display: inline-block
+			width: 14px
+			height: 14px
+			margin: 0 6px
+			
+			@media (max-width: 1199px)
+				margin: 0 5px
+				display: inline-block
+			
+			button
+				position: absolute
+				padding: 0
+				top: 50%
+				left: 50%
+				-webkit-transform: translate(-50%, -50%) 
+				-moz-transform: translate(-50%, -50%) 
+				-ms-transform: translate(-50%, -50%) 
+				-o-transform: translate(-50%, -50%) 
+				transform: translate(-50%, -50%)
+				width: 8px
+				height: 8px
+				background-color: #fff
+				-webkit-transition: all 0.3s ease 
+				-moz-transition: all 0.3s ease 
+				-ms-transition: all 0.3s ease 
+				-o-transition: all 0.3s ease 
+				transition: all 0.3s ease 
+				border-radius: 50%
+				
+				&:before
+					display: none
+					
+			&.slick-active
+				button
+					width: 100%
+					height: 100%
+					background-color: #fff
+					opacity: 1 

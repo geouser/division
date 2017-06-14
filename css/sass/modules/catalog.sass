@@ -22,9 +22,14 @@
 			padding: 40px 0
 			
 	.tabs-controls
+		+flex($j: center)
+		
 		&__item
 			display: inline-block
 			margin: 0 8px
+			
+			@media (max-width: 991px)
+				margin: 5px
 			
 			&.ui-state-active
 				.button

@@ -228,6 +228,11 @@ jQuery(document).ready(function($) {
         arrows: false
     })
 
+    $('.photo-slider').slick({
+        arrows: false,
+        dots: true
+    })
+
 
     $('.productSlider').slick({
         arrows: false,
