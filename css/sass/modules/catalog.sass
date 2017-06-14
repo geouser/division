@@ -2,18 +2,24 @@
 	&-header
 		padding: 85px 0
 		background-color: #FFF 
+		position: relative
+		z-index: 2 
+		
+		@media (max-width: 991px)
+			padding: 40px 0
 		
 		.title
 			color: $text
-			font-size: 24px
-			font-weight: 600
-			text-transform: uppercase
-			text-decoration: underline 
 			margin-bottom: 39px
+			+section-title()
+			
 			
 	&-footer
 		padding: 80px 0
 		background-color: #FFF 
+		
+		@media (max-width: 991px)
+			padding: 40px 0
 			
 	.tabs-controls
 		&__item
@@ -44,10 +50,22 @@
 .products-grid
 	+flex()
 	background-color: #FFF 
+	
+	@media (max-width: 1199px)
+		align-items: stretch
 
 	&-5
 		.product-preview
 			width: 20% 
+			
+			@media (max-width: 1199px)
+				width: 25%
+			
+			@media (max-width: 991px)
+				width: 33.33333%
+			
+			@media (max-width: 599px)
+				width: 50%
 	
 	&-4
 		.product-preview

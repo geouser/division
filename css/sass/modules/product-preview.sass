@@ -1,5 +1,4 @@
 .product-preview
-	height: 360px
 	border-bottom: 1px solid #eee
 	border-right: 1px solid #eee
 	padding-top: 60px
@@ -14,33 +13,78 @@
 	position: relative
 	z-index: 1 
 	
-	&:hover
-		z-index: 10
-		padding-top: 0 
-		border-color: transparent
+	@media (max-width: 1199px)
+		padding-bottom: 100px 
 		
-	&:before
-		content: ''
-		position: absolute
-		z-index: -1 
-		top: -30px
-		bottom: -30px
-		left: -30px
-		right: -30px
-		background-color: #fff
-		border: 1px solid #eee
-		box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-		opacity: 0;
-		visibility: hidden
-		-webkit-transition: all 0.3s ease 
-		-moz-transition: all 0.3s ease 
-		-ms-transition: all 0.3s ease 
-		-o-transition: all 0.3s ease 
-		transition: all 0.3s ease 
+		.hidden
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+			padding: 0 10px 30px 10px 
+			
 	
-	&:hover:before
-		opacity: 1
-		visibility: visible
+	@media (max-width: 599px)
+		padding-top: 20px
+		padding-bottom: 90px  
+		
+		.hidden
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+			padding: 0 10px 20px 10px 
+
+	@media (min-width: 1200px)
+		height: 360px
+		
+		&:hover
+			z-index: 10
+			padding-top: 0 
+			border-color: transparent
+			
+		&:before
+			content: ''
+			position: absolute
+			z-index: -1 
+			top: -30px
+			bottom: -30px
+			left: -30px
+			right: -30px
+			background-color: #fff
+			border: 1px solid #eee
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+			opacity: 0;
+			visibility: hidden
+			-webkit-transition: all 0.3s ease 
+			-moz-transition: all 0.3s ease 
+			-ms-transition: all 0.3s ease 
+			-o-transition: all 0.3s ease 
+			transition: all 0.3s ease 
+		
+		&:hover:before
+			opacity: 1
+			visibility: visible
+			
+		.hidden
+			height: 0
+			overflow: hidden
+			visibility: hidden
+			opacity: 0
+			-webkit-transition: all 0.3s ease 
+			-moz-transition: all 0.3s ease 
+			-ms-transition: all 0.3s ease 
+			-o-transition: all 0.3s ease 
+			transition: all 0.3s ease 
+			
+		&:hover
+			.hidden
+				visibility: visible
+				opacity: 1
+				height: auto
+				
+
+
 	
 	&__image
 		height: 130px
@@ -48,6 +92,12 @@
 		width: 100%
 		margin: 0
 		margin-bottom: 40px
+		
+		@media (max-width: 1199px)
+			margin-bottom: 20px 
+			
+		@media (max-width: 991px)
+			height: 110px
 		
 		a
 			display: block
@@ -66,8 +116,17 @@
 		font-weight: 300
 		font-size: 16px
 		
+		@media (max-width: 991px)
+			font-size: 14px
+		
+		@media (max-width: 599px)
+			font-size: 13px
+		
 		a
 			color: inherit
+			
+			@media (max-width: 1199px)
+				text-decoration: underline
 			
 			&:hover
 				text-decoration: underline
@@ -80,21 +139,10 @@
 		
 	&__add-to-cart
 		margin: 25px 0 20px
-			
-	
-	.hidden
-		height: 0
-		overflow: hidden
-		visibility: hidden
-		opacity: 0
-		-webkit-transition: all 0.3s ease 
-		-moz-transition: all 0.3s ease 
-		-ms-transition: all 0.3s ease 
-		-o-transition: all 0.3s ease 
-		transition: all 0.3s ease 
 		
-	&:hover
-		.hidden
-			visibility: visible
-			opacity: 1
-			height: auto
+		img
+			display: block
+			margin: 0 auto
+		
+		@media (max-width: 991px)
+			margin: 13px 0 10px

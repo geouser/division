@@ -11,13 +11,33 @@
 		padding: 8px 5px
 		margin: 0 2px
 		
+		@media (max-width: 1199px)
+			width: 60px
+		
+		@media (max-width: 991px)
+			width: 50px
+			padding: 8px 2px
+		
 	&-amount
 		font-size: 22px
 		font-weight: 400
 		color: $text
 		display: block
 		
+		@media (max-width: 1199px)
+			font-size: 18px
+			
+		@media (max-width: 991px)
+			margin-bottom: 5px
+		
 	&-period
 		font-size: 16px
 		font-weight: 300
 		color: $red
+		
+		@media (max-width: 1199px)
+			font-size: 12px
+			display: block
+			
+		@media (max-width: 991px)
+			font-size: 10px
