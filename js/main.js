@@ -42,7 +42,7 @@ jQuery(document).ready(function($) {
 
 
     /*---------------------------
-                                  File input logic
+                                  Inputs logic
     ---------------------------*/
     $('input[type=file]').each(function(index, el) {
         $(this).on('change', function(event) {
@@ -65,6 +65,19 @@ jQuery(document).ready(function($) {
             
         });
     });
+
+    $('input[name="subscribe"]').on('change', function(event) {
+        event.preventDefault();
+        var label = $(this).next('label').find('span');
+        if ( $(this).is(':checked') ) {
+            label.text( $(this).attr('data-checked-label') );
+        } else {
+            label.text( $(this).attr('data-unchecked-label') );
+        }
+    });
+
+
+
     
     /*---------------------------
                                 PAGE ANCHORS
