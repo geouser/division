@@ -1,0 +1,31 @@
+.search-results
+    position: absolute
+    top: calc(100% + 10px)
+    width: 100%
+    background-color: #FFF
+    left: 0
+    z-index: 100
+    display: none
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    &.active
+        display: block
+    ul
+        list-style-type: none
+        text-align: left
+        height: 340px
+        overflow: hidden
+        border-top: 10px solid #fff
+        border-bottom: 10px solid #fff
+        padding: 0 25px  
+        li
+            display: block
+            border-bottom: 1px solid #eee
+            a
+                display: inline-block
+                line-height: 55px
+                font-size: 16px
+                font-weight: 300
+                color: #9a9a9a
+                transition: all .2s 
+                &:hover
+                    color: #344146 

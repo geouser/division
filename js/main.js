@@ -98,7 +98,9 @@ jQuery(document).ready(function($) {
         }
     });
 
-
+    $(".content-scroll").mCustomScrollbar({
+        theme: "dark" 
+    });
 
     /*---------------------------
                                   Filters
