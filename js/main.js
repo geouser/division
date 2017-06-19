@@ -92,9 +92,9 @@ jQuery(document).ready(function($) {
     });
 
     $(document).mouseup(function(e) {
-        var container = $('.catalog-menu')
+        var container = $('.catalog-button, .products-menu')
         if (!container.is(e.target) && container.has(e.target).length === 0) {
-            container.removeClass('open');
+            $('.catalog-menu').removeClass('open');
         }
     });
 

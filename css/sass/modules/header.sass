@@ -105,7 +105,24 @@
 	width: 20%
 	height: 100%
 	position: relative
-	z-index: 12 
+	z-index: 20 
+	
+	&:after
+		content: ''
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-color: #f7fafd
+		-webkit-transition: all 0.3s ease 
+		-moz-transition: all 0.3s ease 
+		-ms-transition: all 0.3s ease 
+		-o-transition: all 0.3s ease 
+		transition: all 0.3s ease  
+		visibility: hidden
+		opacity: 0
+		z-index: 4
 	
 	.products-menu
 		position: absolute
@@ -127,15 +144,24 @@
 		-o-transition: all 0.3s ease 
 		transition: all 0.3s ease 
 	
-	&.open .products-menu
-		visibility: visible
-		opacity: 1
-		-webkit-transform: translateY(0) 
-		-moz-transform: translateY(0) 
-		-ms-transform: translateY(0) 
-		-o-transform: translateY(0) 
-		transform: translateY(0) 
+	&.open 
+		.products-menu
+			visibility: visible
+			opacity: 1
+			-webkit-transform: translateY(0) 
+			-moz-transform: translateY(0) 
+			-ms-transform: translateY(0) 
+			-o-transform: translateY(0) 
+			transform: translateY(0) 
 		
+		.catalog-button
+			.icon
+				background-image: url(../img/close-menu.svg);
+				
+		&:after 
+			visibility: visible
+			opacity: 0.8
+			
 
 .catalog-button
 	background-color: $red
@@ -147,6 +173,7 @@
 	padding: 0 25px
 	+flex($ai: center)
 	position: relative
+	z-index: 5 
 	
 	
 	&.js-toggle-products-menu
@@ -178,8 +205,15 @@
 		display: inline-block
 		vertical-align: middle
 		
-	.icon img
-		display: block
+	.icon 
+		width: 20px
+		height: 20px
+		background-image: url(../img/menu.svg);
+		-webkit-background-size: 100% 
+		-o-background-size: 100% 
+		background-size: 100% 
+		background-repeat: no-repeat 
+		background-position: 50% 50% 
 	
 	.label
 		padding-left: 15px
@@ -280,6 +314,7 @@
 	width: 8% 
 	height: 100% 
 	position: relative
+	z-index: 15 
 	
 	.language-button
 		padding: 0 25px 
