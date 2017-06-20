@@ -39,6 +39,9 @@
 
                     <div class="user-area">
                         <div class="item-groups">
+                            <a href="#mobile-search" class="group group-search fancybox">
+                                <img src="img/search.svg" alt="">
+                            </a>
                             <a href="#" class="group group-compare">
                                 <span class="count">2</span>
                                 <img src="img/icon-compare.svg" alt="">
@@ -60,45 +63,133 @@
                 </div> <!-- end site-header-top -->
 
                 <div class="site-header-bottom shadow">
-                    <div class="catalog-menu">
-                        <button class="catalog-button">
-                            <span class="icon"><img src="img/menu.svg" alt=""></span>
-                            <span class="label">Каталог товаров</span>
-                        </button>    
-                    </div>
 
-                    <nav class="header-menu">
-                        <ul>
-                            <li class="header-menu-item"><a href="#">О Нас</a></li>
-                            <li class="header-menu-item"><a href="#">Доставка и оплата</a></li>
-                            <li class="header-menu-item"><a href="#">Корпоративным клиентам</a></li>
-                            <li class="header-menu-item"><a href="#">Связаться с нами</a></li>
-                        </ul>
-                    </nav>
+                    <div class="for-desktop">
+                        <div class="catalog-menu">
+                            <button class="catalog-button">
+                                <span class="icon"><img src="img/menu.svg" alt=""></span>
+                                <span class="label">Каталог товаров</span>
+                            </button>    
+                        </div>
 
-                    <div class="header-phone">
-                        <img src="img/phone-icon.svg" alt="">
-                        <a href="tel:+994505555555">(+99450) 555-55-55</a>
-                    </div>
+                        <nav class="header-menu">
+                            <ul>
+                                <li class="header-menu-item"><a href="#">О Нас</a></li>
+                                <li class="header-menu-item"><a href="#">Доставка и оплата</a></li>
+                                <li class="header-menu-item"><a href="#">Корпоративным клиентам</a></li>
+                                <li class="header-menu-item"><a href="#">Связаться с нами</a></li>
+                            </ul>
+                        </nav>
 
-                    <div class="language-switcher">
-                        <button class="language-button js-toggle-languages">
-                            <span class="flag"><img src="img/ru.svg" alt=""></span>
-                            <span class="label">RUS</span>
+                        <div class="header-phone">
+                            <img src="img/phone-icon.svg" alt="">
+                            <a href="tel:+994505555555">(+99450) 555-55-55</a>
+                        </div>
+
+                        <div class="language-switcher">
+                            <button class="language-button js-toggle-languages">
+                                <span class="flag"><img src="img/ru.svg" alt=""></span>
+                                <span class="label">RUS</span>
+                            </button>
+
+                            <ul class="language-list">
+                                <li class="language-list-item">
+                                    <a href="#"><span class="flag"><img src="img/az.svg" alt=""></span><span>AZN</span></a>
+                                </li>
+                                <li class="language-list-item">
+                                    <a href="#"><span class="flag"><img src="img/ru.svg" alt=""></span><span>RUS</span></a>
+                                </li>
+                                <li class="language-list-item">
+                                    <a href="#"><span class="flag"><img src="img/en.svg" alt=""></span><span>ENG</span></a>
+                                </li>
+                            </ul>
+                        </div>    
+                    </div> <!-- end desktop-menu -->
+
+                    <div class="for-mobile">
+                        <button class="mobile-menu-button js-toggle-mobile-menu">
+                            <span class="icon"></span>
+                            <span class="label">Меню</span>
                         </button>
 
-                        <ul class="language-list">
-                            <li class="language-list-item">
-                                <a href="#"><span class="flag"><img src="img/az.svg" alt=""></span><span>AZN</span></a>
-                            </li>
-                            <li class="language-list-item">
-                                <a href="#"><span class="flag"><img src="img/ru.svg" alt=""></span><span>RUS</span></a>
-                            </li>
-                            <li class="language-list-item">
-                                <a href="#"><span class="flag"><img src="img/en.svg" alt=""></span><span>ENG</span></a>
-                            </li>
-                        </ul>
-                    </div>
+                        <div class="mobile-menu">
+                            <button class="close-mobile-menu"><img src="img/close-menu-red.svg" alt=""></button>
+                            <ul class="menu-list">
+                                <li class="mobile-menu-item"><a href="#">О Нас</a></li>
+                                <li class="mobile-menu-item"><a href="#">Доставка и оплата</a></li>
+                                <li class="mobile-menu-item"><a href="#">Корпоративным клиентам</a></li>
+                                <li class="mobile-menu-item"><a href="#">Свьязаться с нами</a></li>
+                                <li class="mobile-menu-item has-children">
+                                    <a href="#">Каталог</a>
+
+                                    <div class="sub-menu">
+                                        <div class="sub-menu-header">
+                                            <button class="back-button"><img src="img/back-arrow.svg" alt=""></button>
+                                            <span class="sub-menu-title">Каталог</span>
+                                        </div>
+                                        <ul class="menu-list">
+                                            <li class="mobile-menu-item"><a href="#">Сервера</a></li>
+                                            <li class="mobile-menu-item"><a href="#">Фотокамеры</a></li>
+                                            <li class="mobile-menu-item has-children">
+                                                <a href="#">Гаджеты</a>
+
+                                                <div class="sub-menu">
+                                                    <div class="sub-menu-header">
+                                                        <button class="back-button"><img src="img/back-arrow.svg" alt=""></button>
+                                                        <span class="sub-menu-title">Гаджеты</span>
+                                                    </div>
+                                                    <ul class="menu-list">
+                                                        <li class="mobile-menu-item"><a href="#">Сервера 1</a></li>
+                                                        <li class="mobile-menu-item"><a href="#">Фотокамеры 2</a></li>
+                                                        <li class="mobile-menu-item"><a href="#">Гаджеты 3</a></li>
+                                                        <li class="mobile-menu-item"><a href="#">Аксессуары 4</a></li>
+                                                        <li class="mobile-menu-item"><a href="#">Товары со скидкой</a></li>
+                                                        <li class="mobile-menu-item"><a href="#">Сервера</a></li>
+                                                        <li class="mobile-menu-item"><a href="#">Фотокамеры</a></li>
+                                                        <li class="mobile-menu-item"><a href="#">Гаджеты</a></li>
+                                                        <li class="mobile-menu-item"><a href="#">Аксессуары</a></li>    
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="mobile-menu-item"><a href="#">Аксессуары</a></li>
+                                            <li class="mobile-menu-item"><a href="#">Товары со скидкой</a></li>
+                                            <li class="mobile-menu-item"><a href="#">Сервера</a></li>
+                                            <li class="mobile-menu-item"><a href="#">Фотокамеры</a></li>
+                                            <li class="mobile-menu-item"><a href="#">Гаджеты</a></li>
+                                            <li class="mobile-menu-item"><a href="#">Аксессуары</a></li>  
+                                            <li class="mobile-menu-item"><a href="#">Аксессуары</a></li>
+                                            <li class="mobile-menu-item"><a href="#">Товары со скидкой</a></li>
+                                            <li class="mobile-menu-item"><a href="#">Сервера</a></li>
+                                            <li class="mobile-menu-item"><a href="#">Фотокамеры</a></li>
+                                            <li class="mobile-menu-item"><a href="#">Гаджеты</a></li>
+                                            <li class="mobile-menu-item"><a href="#">Аксессуары</a></li>    
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="mobile-menu-item"><a href="tel:+994505555555"><strong>(+99450) 555-55-55</strong></a></li>
+                            </ul> <!-- end menu-list -->
+                        </div> <!-- end mobile menu -->
+
+                        <div class="language-switcher">
+                            <button class="language-button js-toggle-languages">
+                                <span class="flag"><img src="img/ru.svg" alt=""></span>
+                                <span class="label">RUS</span>
+                            </button>
+
+                            <ul class="language-list">
+                                <li class="language-list-item">
+                                    <a href="#"><span class="flag"><img src="img/az.svg" alt=""></span><span>AZN</span></a>
+                                </li>
+                                <li class="language-list-item">
+                                    <a href="#"><span class="flag"><img src="img/ru.svg" alt=""></span><span>RUS</span></a>
+                                </li>
+                                <li class="language-list-item">
+                                    <a href="#"><span class="flag"><img src="img/en.svg" alt=""></span><span>ENG</span></a>
+                                </li>
+                            </ul>
+                        </div> 
+                    </div> <!-- end mobile-menu -->
+
                 </div>
 
             </div>
@@ -111,7 +202,64 @@
                 <div class="offer shadow">
                     <nav class="products-menu">
                         <ul>
-                            <li class="products-menu-item"><a href="#">Планшеты</a></li>
+                            <li class="products-menu-item has-children">
+                                <a href="#">Планшеты</a>
+
+                                <div class="sub-menu">
+                                    <ul>
+                                        <li class="sub-menu-item"><a href="#">Телефоны</a></li>
+                                        <li class="sub-menu-item has-children">
+                                            <a href="#">Ноутбуки и компьютеры</a>
+
+                                            <div class="sub-sub-menu">
+                                                <ul>
+                                                    <li class="sub-sub-menu-item"><a href="#">Телефоны</a></li>
+                                                    <li class="sub-sub-menu-item"><a href="#">Сервера</a></li>
+                                                    <li class="sub-sub-menu-item"><a href="#">Фотокамеры</a></li>
+                                                    <li class="sub-sub-menu-item"><a href="#">Гаджеты</a></li>
+                                                    <li class="sub-sub-menu-item"><a href="#">Аксессуары</a></li>
+                                                    <li class="sub-sub-menu-item"><a href="#">Товары со скидкой</a></li>
+                                                    <li class="sub-sub-menu-item"><a href="#">Телефоны</a></li>
+                                                    <li class="sub-sub-menu-item"><a href="#">Сервера</a></li>
+                                                    <li class="sub-sub-menu-item"><a href="#">Фотокамеры</a></li>
+                                                    <li class="sub-sub-menu-item"><a href="#">Гаджеты</a></li>
+                                                    <li class="sub-sub-menu-item"><a href="#">Аксессуары</a></li>
+                                                    <li class="sub-sub-menu-item"><a href="#">Товары со скидкой</a></li>
+                                                    <li class="sub-sub-menu-item"><a href="#">Телефоны</a></li>
+                                                    <li class="sub-sub-menu-item"><a href="#">Сервера</a></li>
+                                                    <li class="sub-sub-menu-item"><a href="#">Фотокамеры</a></li>
+                                                    <li class="sub-sub-menu-item"><a href="#">Гаджеты</a></li>
+                                                    <li class="sub-sub-menu-item"><a href="#">Аксессуары</a></li>
+                                                    <li class="sub-sub-menu-item"><a href="#">Товары со скидкой</a></li>    
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="sub-menu-item"><a href="#">Сервера</a></li>
+                                        <li class="sub-menu-item"><a href="#">Фотокамеры</a></li>
+                                        <li class="sub-menu-item"><a href="#">Гаджеты</a></li>
+                                        <li class="sub-menu-item"><a href="#">Аксессуары</a></li>
+                                        <li class="sub-menu-item"><a href="#">Товары со скидкой</a></li>
+                                        <li class="sub-menu-item"><a href="#">Сервера</a></li>
+                                        <li class="sub-menu-item"><a href="#">Фотокамеры</a></li>
+                                        <li class="sub-menu-item"><a href="#">Гаджеты</a></li>
+                                        <li class="sub-menu-item"><a href="#">Аксессуары</a></li>
+                                        <li class="sub-menu-item"><a href="#">Товары со скидкой</a></li>  
+                                        <li class="sub-menu-item"><a href="#">Сервера</a></li>
+                                        <li class="sub-menu-item"><a href="#">Фотокамеры</a></li>
+                                        <li class="sub-menu-item"><a href="#">Гаджеты</a></li>
+                                        <li class="sub-menu-item"><a href="#">Аксессуары</a></li>
+                                        <li class="sub-menu-item"><a href="#">Товары со скидкой</a></li>  
+                                        <li class="sub-menu-item"><a href="#">Сервера</a></li>
+                                        <li class="sub-menu-item"><a href="#">Фотокамеры</a></li>
+                                        <li class="sub-menu-item"><a href="#">Гаджеты</a></li>
+                                        <li class="sub-menu-item"><a href="#">Аксессуары</a></li>
+                                        <li class="sub-menu-item"><a href="#">Товары со скидкой</a></li>  
+                                    </ul>
+                                    <div class="banner">
+                                        <a href="#"><img src="img/menu-banner.jpg" alt=""></a>
+                                    </div>
+                                </div>
+                            </li>
                             <li class="products-menu-item"><a href="#">Телефоны</a></li>
                             <li class="products-menu-item"><a href="#">Ноутбуки и компьютеры</a></li>
                             <li class="products-menu-item"><a href="#">Сервера</a></li>
@@ -841,6 +989,13 @@
         </footer> <!-- end site-footer -->
 
         <div id="modal-popup" class="fncb-hide zoom-anim-dialog popup"></div>
+
+        <div id="mobile-search" class="fncb-hide zoom-anim-dialog popup popup-search">
+            <form action="" class="search-form">
+                <input type="text" name="q" placeholder="Поиск товара">
+                <button class="search-button"></button>
+            </form>
+        </div>
 
         <div id="modal-popup-ok" class="fncb-hide zoom-anim-dialog popup result">
             <p class="heading">Спасибо!</p>

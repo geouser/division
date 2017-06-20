@@ -116,6 +116,35 @@ jQuery(document).ready(function($) {
     });
 
     /*---------------------------
+                                  Mobile menu
+    ---------------------------*/
+    $('.mobile-menu-item.has-children > a').on('click', function(event) {
+        event.preventDefault();
+        /* Act on the event */
+        $(this).siblings('.sub-menu').addClass('is-active');
+    });
+
+    $('.back-button').on('click',function(event) {
+        event.preventDefault();
+        /* Act on the event */
+        $(this).closest('.sub-menu').removeClass('is-active');
+    });
+
+    $('.close-mobile-menu').on('click', function(event) {
+        event.preventDefault();
+        $('.mobile-menu').removeClass('is-active');
+    });
+
+    $('.js-toggle-mobile-menu').on('click', function(event) {
+        event.preventDefault();
+        /* Act on the event */
+        $('.mobile-menu').addClass('is-active');
+    });
+
+
+
+
+    /*---------------------------
                                   Filters
     ---------------------------*/
     /* toggle filters form */
